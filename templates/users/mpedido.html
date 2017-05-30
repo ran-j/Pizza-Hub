@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	{% load static %}
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href= "{% static 'custom.css' %}" 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> PizzaHub Pizzaria </title>
+  </head>
+  
+	<body>
+	<div id="geral">	
+		<div id="topo"></div>
+	
+<ul>
+  <li><a href="/cliente/inicio/">Início</a></li>
+  <li><a class="active" href="/cliente/fazerpedido/">Fazer Pedio</a></li>
+  <li><a href="/cliente/pedidosconsulta/">Consultar Pedido</a></li>
+  <li><a href="/cliente/cardapio/">Cardapios e Preços</a></li>
+  <li><a href="/cliente/loogout/">Deslogar</a></li>
+</ul>
+
+ {% if ped %}
+ 
+	Sabor: {{  ped.sabor  }}</br>
+	<br></br>
+	Quantidade: {{  ped.quantidade  }}</br>
+	<br></br>
+	Preço: {{  ped.endereco  }}</br>
+	<br></br>
+	Telefone: {{  ped.telefone  }}</br>
+	<br></br>
+	Número de pedido: {{  ped.numerodepedido  }}</br>
+	<br></br>
+	Status: {{  ped.status  }}</br>
+	
+      
+ {% endif %}
+ 
+
+
+</div>
+
+ {% if reto %}
+  	<script>
+          alert('{{ reto }}');
+        </script>
+ {% endif %}
+	</body>	
+	
+</html>

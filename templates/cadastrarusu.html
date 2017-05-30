@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	{% load static %}
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title> Cadastro de Itens </title>
+  </head>
+  <body>
+  <form  style="margin: 0 auto;" id="cadprod" name="cadprod" method="post">
+				{% csrf_token %}
+				<input type="text" id="nomeprod" name="usuario" placeholder="usuário" size="45"></br>
+				<input type="text" id="nomeprod" name="email" placeholder="email" size="45"></br>
+				<input type="text" id="nomeprod" name="senha" placeholder="senha" size="45"></br>
+			<input type="submit" Value="Cadastrar" class="button" onClick="valcadprod();">
+  	</body>	
+	
+{% if reto %}
+  	<script>
+          alert('{{ reto }}');
+        </script>
+{% endif %}
+</html>

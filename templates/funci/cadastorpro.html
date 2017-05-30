@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	{% load static %}
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href= "{% static 'custom.css' %}" 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> PizzaHub Pizzaria </title>
+  </head>
+  
+	<body>
+	<div id="geral">	
+		<div id="topo"></div>
+	
+<ul>
+  <li><a class="active" href="/funcionario/inicio/">Início</a></li>
+  <li><a href="/funcionario/cadastroprodutos/">Cadastrar Produtos</a></li>
+  <li><a href="/funcionario/pedidosfn/">Pedidos</a></li>
+  <li><a href="/funcionario/produtos/">Estoque</a></li>
+  <li><a href="/logout">Deslogar</a></li>
+</ul>
+
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Cadastrar</button>
+</form>
+</div>
+
+ {% if reto %}
+  	<script>
+          alert('{{ reto }}');
+        </script>
+ {% endif %}
+	</body>	
+	
+</html>

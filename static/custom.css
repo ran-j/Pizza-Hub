@@ -1,0 +1,149 @@
+#geral {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+}
+
+#topo {
+	background-image: url("imagens/ratinhotopo.jpg");
+	width: auto;
+	height: 370px;
+	background-repeat: repeat;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ad2525;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color:black;
+}
+
+.active {
+    background-color:black;
+}
+
+.imagensop {
+	box-shadow: 10px 10px 5px #888888;
+	float: left;
+	border-color: black;
+	width: 400px;
+	height: 400px;
+	border-radius: 8px;
+	margin-right: 50px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+div.imagensop img{
+	width: 400px;
+	height: 350px;
+	border-radius: 8px 8px 0px 0px;
+	opacity: 0.6;
+}
+
+div.imagensop img:hover{
+	opacity: 1;
+}
+
+div.imagensop p{
+  text-align: center;
+}
+
+a img{
+	border:none;
+}
+
+form{
+  background-color:#f2f2f2;
+  width:600px;
+  margin:10px 0 10px 0;
+  text-align:center;
+}
+
+form p{
+  padding:12px;
+}
+
+form p label{
+  color:#333;
+  font-weight:900;
+}
+
+form input{
+  padding:6px;
+  border:1px solid #ccc;
+  width:300px;
+}
+
+table{
+  width:600px;
+  border:1px solid #ccc;
+}
+
+table thead th{
+  background-color:#ad2525;
+  padding:6px;
+  color:#fff;
+  text-align:center;
+  font-size:14px;
+}
+
+table thead th.header{
+  cursor:pointer;
+}
+
+table tbody td{
+  padding:6px;
+  text-align:center;
+  color:#333;
+}
+
+table tbody tr.odd td{
+  background-color:#ffffcc;
+}
+
+table tbody tr.hover td{
+  background-color:#a9d0f5;
+}
+
+table tbody tr.selected td{
+  background-color:#a9f5a9!important;
+}
+
+.pagedisplay{
+	width:40px;
+	text-align:center;
+	border:none;
+	background-color:#f2f2f2;
+	font-weight:900;
+}
+
+#pager span{
+	font-weight:900;
+	display:inline-block;
+	margin:0 0 0 20px;
+	color:#666;
+	float:right;
+}
+
+#pager form{
+	text-align:left;
+	padding:10px;
+	width:580px;
+}
