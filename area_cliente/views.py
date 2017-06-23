@@ -4,11 +4,13 @@ import random
 from django.shortcuts import render
 from models import Cadastropedido
 from .forms import PedidoPizza,PesquisarPedido
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='/loginerro')
 def Index(request):
 	return render(request, 'users/index.html')
 	
-	
+@login_required(login_url='/loginerro')
 def FazerPedido(request):
     if request.method == 'POST':
 	form = PedidoPizza(request.POST)
@@ -33,7 +35,7 @@ def FazerPedido(request):
         form = PedidoPizza()
     return render(request,'users/fazerfedido.html', {'form': form})
 	
-	
+@login_required(login_url='/loginerro')	
 def Pedidos(request):
 	if request.method == 'POST':
 	

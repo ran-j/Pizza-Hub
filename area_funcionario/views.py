@@ -4,14 +4,17 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from models import CadastroMateriais
 from area_cliente.models import Cadastropedido
+from django.contrib.auth.decorators import login_required
 
 from .forms import ItensForm
 from area_cliente.forms import PesquisarPedido
 
+@login_required(login_url='/loginerro')
 def Index(request):
 	return render(request, 'funci/index.html')
 		
 
+@login_required(login_url='/loginerro')
 def Cadastroprodutos(request):
     if request.method == 'POST':
 	form = ItensForm(request.POST)
@@ -35,13 +38,14 @@ def Cadastroprodutos(request):
         form = ItensForm()
     return render(request, 'funci/cadastorpro.html', {'form': form})
 	
-	
+@login_required(login_url='/loginerro')
 def Estoque(request):
     if request.method == 'GET':
         lista_itens = CadastroMateriais.objects.all()
 
     return render(request, 'funci/estoques.html', {'lista_itens': lista_itens})
-
+	
+@login_required(login_url='/loginerro')
 def Pedidos(request):
 	lista_pedidos = Cadastropedido.objects.all()
 	return render(request,'funci/mpedido.html',{'ped':lista_pedidos})
